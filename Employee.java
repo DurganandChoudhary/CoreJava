@@ -1,24 +1,27 @@
+package BufferedRead;
+
+// import java.io.BufferedReader;
+// import java.io.IOException;
+// import java.io.InputStreamReader;
+
 public class Employee {
-
-    static String ename = "Raja";
-    int empno = 101;
-    double esalary = 1000;
-
-    void empDetails(int empid)
+    public static void main(String[] args) throws Exception 
     {
-         String ejob = "Analyst";
 
-        System.out.println("Employee name : "+Employee.ename);
-        System.out.println("Employee Number is : "+empno);
-        System.out.println("Employee salary is : "+esalary);
-        System.out.println("Employee job is : "+ejob);
-        System.out.println("Employee Id is : "+empid);
+        // java.io.BufferedReader br = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
+
+        java.io.InputStreamReader isr = new java.io.InputStreamReader(System.in);
+
+        java.io.BufferedReader br = new java.io.BufferedReader(isr);
+
+        System.out.println("Enter employee name ");
+        String ename = br.readLine();
+
+        System.out.println("Employee Number : ");
+        int empno = Integer.parseInt(br.readLine());
+
+        System.out.println("Employee name is : " + ename);
+        System.out.println("Employee number is : " + empno);
+
     }
-    public static void main(String[] args) 
-    {
-        Employee emp =new Employee();
-        emp.empDetails(101);
-       
-    }
-    
 }
